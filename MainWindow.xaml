@@ -10,23 +10,12 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20">
-                
-            </ColumnDefinition>
-        
-            <ColumnDefinition>
-                
-            </ColumnDefinition>
-            <ColumnDefinition>
-
-             
-            </ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
-            <ColumnDefinition>
-            </ColumnDefinition>
-   
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
-            
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"></RowDefinition>
@@ -40,11 +29,13 @@
         <Grid.Background>
             <ImageBrush x:Name="backgroundImage" ImageSource="/InterflexWeatherForecast;component/Images/Sun.png"></ImageBrush>
         </Grid.Background>
+        
         <Label x:Name="labelTemperature" Grid.Row="3" Grid.Column="1" Content="40°C" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="5" BlurRadius="1" Color="Black"/>
             </Label.Effect>
         </Label>
+        
         <Label x:Name="labelWeatherDescription" Grid.Row="4" Grid.Column="1" Content="cloudy" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Foreground="White">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="5" BlurRadius="1" Color="Black"/>
@@ -54,9 +45,9 @@
         <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Padding="1" CornerRadius="25" BorderThickness="1" Background="white">
             <TextBox x:Name="textBoxQuery" Text="Durchhausen" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" FontSize="32" VerticalAlignment="Top" FontWeight="Bold"></TextBox>
         </Border>
+
         <Border Grid.Column="4" Grid.Row="1" Padding="1" CornerRadius="10" BorderThickness="1" Background="white">
             <Button Click="Button_Click" Cursor="Hand" Background="Transparent" BorderThickness="0" Content="Search" HorizontalAlignment="Center" FontSize="28" VerticalAlignment="Top"></Button>
         </Border>
-
     </Grid>
 </Window>

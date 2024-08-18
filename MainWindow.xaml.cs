@@ -18,9 +18,6 @@ using Newtonsoft.Json;
 
 namespace InterflexWeatherForecast
 {
-    /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private readonly string apiKey = "b4288bd546f907154d09db9535e0a9e1";
@@ -34,7 +31,6 @@ namespace InterflexWeatherForecast
 
         public void UpdateData(string city)
         {
-            // geht hier auch var?
             WeatherMapResponse result = GetWeatherData(city);
 
             // Console.WriteLine(result);
@@ -60,7 +56,6 @@ namespace InterflexWeatherForecast
             labelTemperature.Content = result.main.temp.ToString("F1") + "°C";
             labelWeatherDescription.Content = result.weather[0].main;
         }
-
 
         public WeatherMapResponse GetWeatherData(string city)
         {
